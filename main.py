@@ -1,7 +1,15 @@
+def count_words(content):
+    words = content.split()
+    count = 0
+    for word in words:
+        count += 1
+    print(count)
+
 def main():
-    with open("./books/frankenstein.txt") as f:
+    book_dir = "./books/"
+    with open(f"{book_dir}frankenstein.txt") as f:
         book_content = f.read()
-        print(book_content)
+        count_words(book_content)
 
 
 main()
